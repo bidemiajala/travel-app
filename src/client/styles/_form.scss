@@ -1,0 +1,63 @@
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -120px;
+    z-index: 100;
+    position: relative;
+    border-radius: $border-radius;
+    padding: 20px;
+    background: $white;
+    box-shadow: 0 1px 3px hsla(0%, 0%, 0%, 0.2);
+    label {
+        margin-bottom: 15px;
+    }
+    &__destination,
+    &__departure-date {
+        flex: 1 1 auto;
+        & input {
+            margin-top: 4px;
+            height: 52px;
+            background: $white;
+            border: 2px solid $grey-500;
+        }
+        :focus{
+            outline: none;
+        }
+    }
+    &__btn-search {
+        border: 2px;
+        flex: 1 1 auto;
+        font-size: 16px;
+        align-self: flex-end;
+        color: $white;
+        background: $grey-vivid-400;
+        justify-content: center;
+        padding: 18px 15px;
+        &:hover {
+            background: $grey-vivid-500;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .search-form {
+        padding: 30px;
+        label {
+            margin-bottom: 0;
+        }
+        &__destination {
+            flex: 1 1 50%;
+            max-width: 50%;
+        }
+        &__departure-date {
+            flex: 1 1 30%;
+            max-width: 30%;
+        }
+        &__btn-search {
+            flex: 1 1 15%;
+            max-width: 15%;
+        }
+    }
+}

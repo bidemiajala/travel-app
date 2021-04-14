@@ -1,0 +1,21 @@
+#savedTripsSection {
+    display: grid;
+    grid: auto / 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 480px) {
+    #savedTripsSection {
+        display: grid;
+        grid: auto / 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    #savedTripsSection {
+        display: grid;
+        grid: auto / 1fr 1fr 1fr;
+        gap: 30px;
+    }
+}
