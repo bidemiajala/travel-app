@@ -56,6 +56,7 @@ Also give it a star. I'll appreciate the attention.
 - Increase test coverage to at least 80%
 - Add a to-do list for travellers
 - Add a reminder for when a saved trip is <= 2 days
+- Clear console errors
 
 ## License
 [MIT](https://github.com/bidemiajala/travel-app/blob/7be020d7fa423b7670b7cc8f43daa3932e0e9468/LICENSE)
