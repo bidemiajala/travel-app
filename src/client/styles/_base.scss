@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: $grey-900;
+    background: $white;
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+main {
+    flex: 2;
+}
+
+section.hero {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    background: url('/images/plane.jpg') center 19% / cover no-repeat;
+    height: 240px;
+    position: relative;
+    z-index: 1;
+    & h2 {
+        color: $white;
+        z-index: 100;
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 0 15px;
+    }
+}
+
+@media (min-width: 720px) {
+    section.hero {
+        height: 320px;
+        & h2 {
+            font-size: 40px;
+        }
+    }
+}
+
+section.search,
+section.results,
+section.saved-trips {
+    max-width: 960px;
+    margin: 50px auto;
+    padding: 0 30px;
+}
+
+input[type='text'],
+input[type='date'] {
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 1;
+    padding: 15px 20px;
+    margin-bottom: 0;
+    border: 2px solid $grey-200;
+    border-radius: $border-radius;
+    &.error {
+        border: 2px solid $red-400;
+    }
+}
+
+.btn {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: $border-radius;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1;
+    transition: all ease 0.7s;
+    &:hover {
+        cursor: pointer;
+    }
+}

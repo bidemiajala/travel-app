@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,500&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <script
+            src="https://kit.fontawesome.com/aca2d893d4.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>iTravel - Personal travel app</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo-text">
+               <a href="#"> iTravel <i class="fas fa-globe-africa"></i> </a>
+            </div>
+        </header>
+        <main>
+            <section class="hero">
+                <h2>Where would you like to go?</h2>
+            </section>
+
+            <section class="search">
+                <form
+                    class="search-form"
+                    onsubmit="return Client.handleSubmit(event)"
+                >
+                    <label class="search-form__destination" for="destination"
+                        >Destination
+                        <input
+                            id="destination"
+                            type="text"
+                            name="destination"
+                            value=""
+                            placeholder="City or Country"
+                            required
+                        />
+                    </label>
+                    <label
+                        class="search-form__departure-date"
+                        for="departureDate"
+                        >Departure Date
+                        <input
+                            id="departureDate"
+                            type="date"
+                            name="departureDate"
+                            required
+                        />
+                    </label>
+                    <button class="btn search-form__btn-search" type="submit">
+                        Search <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </section>
+            <section class="results">
+                <div id="tripInfo"></div>
+            </section>
+            <section class="saved-trips">
+                <div id="savedTripsSection"></div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; iTravel by <a href="https://bidemi.xyz" target="_blank">Bidemi</a></p>
+        </footer>
+        <script>
+            // Handle service worker
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+    </body>
+</html>
