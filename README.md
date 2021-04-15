@@ -1,7 +1,8 @@
 # iTravel (Personal travel app)
 ## Udacity FEND Capstone Project - Travel App
-
 iTravel is a simple app to plan your trips. It gives real-time weather information, pictures of your destination, and temperature using third-party APIs.
+
+<img src="src/client/images/home.png" width="350" height="800">
 
 ## Installation
 ### Dev
